@@ -1,10 +1,9 @@
 //TODO: change it from 3 to 20
-//TODO: activate the start over button
 //TODO: fix the score styling
 
 userOrder = [];
 computerOrder = [];
-const maxLevels = 3;
+const maxLevels = 20;
 let id = 0;
 let color = 0;
 let level = 0;
@@ -42,16 +41,18 @@ $(document).ready(function() {
       if(strict) {
         console.log("strict mode");
         computerOrder = [];
-        startOrder();
+        level = 1;
       }
 
       error = true;
       displayError();
       userOrder = [];
+      startOrder();
     } else
       if (userOrder.length == computerOrder.length && userOrder.length < maxLevels) {
       level++;
       userOrder = [];
+      error = false;
       startOrder();
     }
 
@@ -66,8 +67,8 @@ $(document).ready(function() {
     $('.strictText').text("Strict Mode On");
     level = 0;
     level++;
-    computerOrder = 0;
-    userOrder = 0;
+    computerOrder = [];
+    userOrder = [];
     strict = true;
     startOrder();
   })
@@ -78,8 +79,8 @@ $(document).ready(function() {
 function checkUserOrder() {
   for(let i = 0; i < userOrder.length; i++) {
     if(userOrder[i] != computerOrder[i]) { return false; }
-   return true;
   }
+   return true;
 }
 //
 
@@ -89,7 +90,7 @@ function displayError() {
   const wrong = setInterval(function() {
     $('#scoreNumber').text("wrong");
     counter++;
-    if(counter == 3) {
+    if(counter == 5) {
       $('#scoreNumber').text(level);
       clearInterval(wrong);
       userOrder = [];
@@ -105,7 +106,10 @@ function startOrder() {
     getRandomOrder();
   }
   if(error && strict) {
-    getRandomOrder();
+    userOrder = [];
+    computerOrder = [];
+    level = 0;
+    $('#reset').css({'color' : 'white', 'background-color' : 'red', 'border' : 'none' });
   }
 
   let i = 0;
@@ -141,5 +145,8 @@ function addClassSound(id, color) {
 function playSound(id) {
   const sound = new Audio(boardSound[id]);
   sound.play();
-
 }
+
+$('#reset').click(function() {
+  location.reload(true);
+});
