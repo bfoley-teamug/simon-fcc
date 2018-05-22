@@ -1,71 +1,78 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+
+body {
+  color: #484848;
+  font-family: 'Montserrat', sans-serif;
+ }
+
 
 .circle {
- margin: 40px 20px 10px;
- height: 80px;
- width: 80px;
- background-color: #dcdcdc;
- border-radius: 50%;
- box-shadow: 3px 3px 12px #505050;
- display: inline-block;
- cursor: pointer;
+  margin: 40px 20px 10px;
+  height: 120px;
+  width: 120px;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  box-shadow: 3px 3px 12px #505050;
+  display: inline-block;
+  cursor: pointer;
 }
 
 h1 {
- margin: 20px 0;
+  margin: 20px 0;
 }
 
 h2 {
- margin: 10px 0;
- font-size: 22px;
+  margin: 10px 0;
+  font-size: 22px;
 }
 
 .score {
- background-color: #C8C8C8;
- margin: 20px 0;
+  background-color: #F0F0F0;
+  margin: 20px 0;
 }
 
 button {
- margin: 5px 0;
+  margin: 5px 0;
 }
 
 .red, .yellow, .green, .blue {
- border-style: solid;
- border-width: 3px;
+  border-style: solid;
+  border-width: 3px;
 }
 
 .red {
- border-color: red;
+  border-color: red;
 }
 
 .yellow {
- border-color: yellow;
+  border-color: yellow;
 }
 
 .green {
- border-color: green;
+  border-color: green;
 }
 
 .blue {
- border-color: blue;
+  border-color: blue;
 }
 
 .red-select {
- background-color: red !important;
+  background-color: red !important;
 }
 
 .yellow-select {
- background-color: yellow !important;
+  background-color: yellow !important;
 }
 
 .green-select {
- background-color: green !important;
+  background-color: green !important;
 }
 
 .blue-select {
- background-color: blue !important;
+  background-color: blue !important;
 }
 
 .strictText {
- margin-left: 15px;
- color: #17a2b8;
+  margin-left: 15px;
+  color: #17a2b8;
 }

@@ -1,6 +1,3 @@
-//TODO: change it from 3 to 20
-//TODO: fix the score styling
-
 userOrder = [];
 computerOrder = [];
 const maxLevels = 20;
