@@ -63,7 +63,6 @@ $(document).ready(function() {
   $(".strict").click(function() {
     $('.strictText').text("Strict Mode On");
     level = 0;
-    level++;
     computerOrder = [];
     userOrder = [];
     strict = true;
